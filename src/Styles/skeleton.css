@@ -1,0 +1,13 @@
+.skeleton {
+  animation: pulse 1.2s infinite ease-in-out;
+  background: rgba(255,255,255,.18);
+  border-radius: 16px;
+  height: 90px;
+  margin-top: 16px;
+}
+
+@keyframes pulse {
+  0% { opacity:.6 }
+  50% { opacity:1 }
+  100% { opacity:.6 }
+}

@@ -1,0 +1,46 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.18);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --text-light: #ffffff;
+  --accent: #5be4c8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: url("/bg-city.jpg") center/cover fixed no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+button { cursor: pointer; }
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#map, .leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.glass-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at 30% -10%,
+    rgba(255,255,255,.35),
+    transparent 45%
+  );
+}
